@@ -9,15 +9,15 @@ services:
             - ./sources:/app:cached
         working_dir: /app
         ports:
-            - 3000:3000
-            - 1337:1337
+            - 127.0.0.1:3000:3000
+            - 127.0.0.1:1337:1337
         environment: 
             HOST: 0.0.0.0
     db:
         image: postgres:latest
         restart: always
         ports:
-            - 5432:5432
+            - 127.0.0.1:5432:5432
         environment:
             POSTGRES_PASSWORD: checkin@1325
             POSTGRES_USER: check1Nvi3tNam
